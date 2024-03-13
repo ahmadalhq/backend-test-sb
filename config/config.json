@@ -8,7 +8,7 @@
       "username": "postgres",
       "password": "empatpuluh6",
       "logMode": true,
-      "schema": "backend_test_food_api"
+      "schema": "sandbox"
     }
   }
 }

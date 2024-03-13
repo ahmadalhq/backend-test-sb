@@ -9,7 +9,8 @@ import (
 )
 
 type Configuration struct {
-	Port       string `default:":9270"`
+	Port       string `default:":9170"`
+	RootURL    string `split_words:"true" default:"/api"`
 	NameApp    string `split_words:"true" default:"Backend Test"`
 	LogLevel   string `split_words:"true" default:"debug"`
 	ConfigFile string `split_words:"true" default:"config/config.json"`
