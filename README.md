@@ -7,6 +7,7 @@ Technical Test for SDE - Backend Engineer - PT Darta Media Indonesia / Kaskus
 3. Check the common/init.go to setup or change the desired port to be running these programs.
 3. go to main.go file and set migrate to true if running for the 1st time.
 4. run script "go run main.go".
+##
 
 #### Check misc folder to get the postman collection
 
