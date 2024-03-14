@@ -30,7 +30,7 @@ func GetInstancePostgresDb() *gorm.DB {
 		lf := logrus.WithField("host", postgreInfo.Host)
 
 		dbConfig := fmt.Sprintf(
-			"host=%s port=%d user=%s password=%s dbname=%s search_path=%s sslmode=%s fallback_application_name=diyo_pos_app",
+			"host=%s port=%d user=%s password=%s dbname=%s search_path=%s sslmode=%s fallback_application_name=backend_test",
 			postgreInfo.Host, postgreInfo.Port, postgreInfo.Username, postgreInfo.Password, postgreInfo.Name, postgreInfo.Schema, postgreInfo.SSLMode,
 		)
 
