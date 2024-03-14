@@ -2,7 +2,7 @@
   "database": {
     "postgre": {
       "name": "railway",
-      "host": "postgres.railway.internal",
+      "host": "roundhouse.proxy.rlwy.net",
       "sslmode": "disable",
       "port": 41718,
       "username": "postgres",

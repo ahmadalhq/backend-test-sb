@@ -3,17 +3,17 @@ package models
 import (
 	"time"
 
+	"github.com/lib/pq"
 	"gorm.io/datatypes"
 	"gorm.io/gorm"
 )
 
 type Recipes struct {
-	ID          int64          `json:"Id"`
-	Name        string         `json:"name"`
-	Description string         `json:"desc"`
-	Ingredients datatypes.JSON `json:"ingredients" gorm:"column:ingredients"`
-	// HowTo          pq.StringArray `json:"howTo" gorm:"type:text[]"`
-	HowTo          datatypes.JSON `json:"howTo" gorm:"column:how_to"`
+	ID             int64          `json:"Id"`
+	Name           string         `json:"name"`
+	Description    string         `json:"desc"`
+	Ingredients    datatypes.JSON `json:"ingredients" gorm:"column:ingredients"`
+	HowTo          pq.StringArray `json:"howTo" gorm:"type:text[]"`
 	CookingTime    int64          `json:"cookingTime"`
 	ServingPortion int64          `json:"servingPortion"`
 	CreatedAt      *time.Time     `json:"createdAt,omitempty"`
