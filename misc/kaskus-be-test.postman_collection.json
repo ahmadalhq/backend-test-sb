@@ -12,13 +12,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:9170/api/ping",
+					"raw": "{{localhost}}/ping",
 					"host": [
-						"localhost"
+						"{{localhost}}"
 					],
-					"port": "9170",
 					"path": [
-						"api",
 						"ping"
 					]
 				}
@@ -31,21 +29,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:9170/api/recipe/list?params=nasi",
+					"raw": "{{prod}}/recipe/list",
 					"host": [
-						"localhost"
+						"{{prod}}"
 					],
-					"port": "9170",
 					"path": [
-						"api",
 						"recipe",
 						"list"
-					],
-					"query": [
-						{
-							"key": "params",
-							"value": "nasi"
-						}
 					]
 				}
 			},
@@ -66,13 +56,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9170/api/recipe/create",
+					"raw": "{{prod}}/recipe/create",
 					"host": [
-						"localhost"
+						"{{prod}}"
 					],
-					"port": "9170",
 					"path": [
-						"api",
 						"recipe",
 						"create"
 					]
@@ -87,7 +75,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Resep Nasi Goreng Kampung\",\r\n    \"desc\": \"Sajian andalan dari nasi putih yang mudah dan cepat dibuat. Nasi goreng dengan bumbu sederhana yang gurih dan lezat, dapat cepat disajikan untuk santap sahur\",\r\n    \"ingredients\": [\r\n        \"4 sdm minyak goreng\",\r\n        \"100 g fillet dada ayam, potong dadu 1 cm\",\r\n        \"600 g nasi putih dingin\",\r\n        \"2 sdm kecap manis\",\r\n        \"2 batang daun bawang, iris tipis\"\r\n    ],\r\n    \"seasonings\": [\r\n        \"8 butir bawang merah\",\r\n        \"5 siung bawang putih\",\r\n        \"4 butir kemiri\",\r\n        \"1 sdt garam\",\r\n        \"½ sdt merica bubuk\",\r\n        \"1 sdt kaldu ayam bubuk\",\r\n        \"1 sdm ebi sangrai, haluskan\"\r\n    ],\r\n    \"additional\": [\r\n        \"kerupuk bawang\",\r\n        \"bawang goreng\",\r\n        \"telur mata sapi\",\r\n        \"timun\"\r\n    ],\r\n    \"howTo\": [\r\n        \"Panaskan minyak goreng dalam wajan, tumis bumbu halus hingga harum.\",\r\n        \"Masukkan irisan daging ayam, tumis hingga berubah warna.\",\r\n        \"Tambahkan nasi dan kecap manis. Aduk rata. Masukkan daun bawang, aduk rata. Angkat.\",\r\n        \"Sajikan nasi goreng dengan pelengkap sesuai selera.\"\r\n    ],\r\n    \"cookingTime\": 20,\r\n    \"servingPortion\": 4\r\n}",
+					"raw": "{\r\n    \"servingPortion\": 9\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -95,13 +83,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:9170/api/recipe/1",
+					"raw": "{{prod}}/recipe/1",
 					"host": [
-						"localhost"
+						"{{prod}}"
 					],
-					"port": "9170",
 					"path": [
-						"api",
 						"recipe",
 						"1"
 					]
@@ -115,19 +101,27 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:9170/api/recipe/",
+					"raw": "{{prod}}/recipe/2",
 					"host": [
-						"localhost"
+						"{{prod}}"
 					],
-					"port": "9170",
 					"path": [
-						"api",
 						"recipe",
-						""
+						"2"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "prod",
+			"value": "https://backend-test-sb-production.up.railway.app/api"
+		},
+		{
+			"key": "localhost",
+			"value": "localhost:9170/api"
 		}
 	]
 }
