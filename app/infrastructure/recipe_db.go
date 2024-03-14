@@ -60,7 +60,13 @@ func (c *connectionDB) UpdateRecipe(id int, input *models.Recipes) (output *mode
 	if err != nil {
 		return
 	}
-	return input, err
+
+	err = c.db.Where("id = ?", id).Find(&output).Error
+	if err != nil {
+		return
+	}
+
+	return output, err
 }
 
 func (c *connectionDB) DeleteRecipe(id int) (err error) {
