@@ -9,6 +9,14 @@ Technical Test for SDE - Backend Engineer - PT Darta Media Indonesia / Kaskus
 4. run script "go run main.go".
 ##
 
+##
 #### Check misc folder to get the postman collection
-
 #### These repository using clean code and hexagonal architecture
+##
+
+##
+#### Deployed API can be accessed through: 
+- https://backend-test-sb-production.up.railway.app/api/ping // For checking connection
+- https://backend-test-sb-production.up.railway.app/api/recipe/list // For getting all recipes lists
+- other api can be found on misc folder
+##
